@@ -1,25 +1,83 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+*.log.*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Operating System files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Environment files
 .env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Next.js build output
+.next/
+out/
+
+# Vite build output
+dist/
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+*.d.ts
+*.map
+
+# IDEs and Text Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# MacOS
+*.swp
+*.swo
+
+# Windows Installer
+Thumbs.db
+
+# React Native
+.expo/
+.expo-shared/
+
+# Dependency directories
+bower_components/
+
+# Build output
+build/
+
+# Test coverage
+coverage/
+
+# Yarn lock file if you're not using Yarn
+yarn.lock
+
+# Storybook
+storybook-static/
+
+# Firebase
+.firebaserc
+
+# Cache
+.cache/
+
+# Prisma
+prisma/
+
+# AWS SAM
+.aws-sam/
+
+# Docker
+docker-compose.override.yml
+.docker/
