@@ -1,7 +1,5 @@
-// UserContext.tsx
 import React, { createContext, useContext, useState } from "react";
 
-// Definindo o tipo do contexto
 type UserContextType = {
   username: string;
   setUsername: (username: string) => void;
