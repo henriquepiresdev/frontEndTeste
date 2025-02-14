@@ -1,4 +1,9 @@
 import React from "react";
+import { Header } from "../components/Header";
 export function Clients() {
-  return <h1 className="bg-blue-500">Welcome to client page!</h1>;
+  return (
+    <body className="bg-white-2 w-full h-screen ">
+      <Header />
+    </body>
+  );
 }
