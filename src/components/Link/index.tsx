@@ -9,9 +9,7 @@ interface LinkProps {
 
 export function Link({ children, href }: LinkProps) {
   const location = useLocation();
-
   const isActive = location.pathname === href;
-
   return (
     <a
       href={href}
