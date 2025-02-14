@@ -1,6 +1,6 @@
 import { formHomeSchema, UserFormData } from "../../schemas/formHome.schema";
 import { useFormInitial } from "./hooks/useFormInitial";
-import { ButtonCustom } from "../button";
+import { ButtonCustom } from "../Button";
 import { Input } from "../Input";
 import { Form } from "../Form";
 import React from "react";
@@ -11,7 +11,6 @@ type FormHomeProps = {
 
 export function FormHome({ className }: FormHomeProps) {
   const { handleSubmit } = useFormInitial();
-
   return (
     <Form<UserFormData>
       schema={formHomeSchema}
