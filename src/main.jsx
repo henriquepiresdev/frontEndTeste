@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import { UserProvider } from './context';
+import { LimitProvider } from "./context/limitContext";
+
 
 const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,7 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <UserProvider>
-          <App />
+          <LimitProvider>
+            <App />
+          </LimitProvider>
         </UserProvider>
       </ThemeProvider>
 
