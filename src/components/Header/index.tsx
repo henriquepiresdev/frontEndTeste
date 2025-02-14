@@ -21,13 +21,16 @@ export function Header() {
 
       <div className="w-full md:w-1/2 h-full flex justify-around items-center max-w-lg flex-wrap">
         <Link href="/clients">Clientes</Link>
-        <Link href="/clients/selected">Clientes Selecionados</Link>
+        <Link href="/clients-selected">Clientes Selecionados</Link>
         <Link href="/">Sair</Link>
       </div>
 
       <div className="hidden md:flex w-1/4 h-full">
         <p className="text-black- font-medium flex items-center justify-end gap">
-          Olá, <span className="ml-1 font-semibold">{username}</span>
+          Olá,{" "}
+          <span className="ml-1 font-semibold whitespace-nowrap">
+            {username}
+          </span>
         </p>
       </div>
     </header>
