@@ -8,8 +8,10 @@ export function useFormInitial() {
 
   const handleSubmit = (data: UserFormData) => {
     setUsername(data.name);
+    localStorage.setItem("username", data.name);
     navigate("/clients");
   };
+
   return {
     handleSubmit,
   };
