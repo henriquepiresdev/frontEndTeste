@@ -4,7 +4,9 @@ import axios, { AxiosResponse } from "axios";
 // @ts-ignore
 const apiUrl = import.meta.env.VITE_API_URL;
 //esse bendito env. fica dando erro de tipagem
-export const createUser = async (user: User): Promise<AxiosResponse<User>> => {
+export const createUser = async (
+  user: Omit<User, "id" | "createdAt" | "updatedAt">
+): Promise<AxiosResponse<User>> => {
   return axios.post(`${apiUrl}/users`, user);
 };
 
