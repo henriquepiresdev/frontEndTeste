@@ -13,10 +13,8 @@ type PropsListCards = {
 };
 
 export function ListCards({ data, page }: PropsListCards) {
-  const [openModal, setOpenModal] = useState(false);
-
-  const handleOpenModal = () => setOpenModal(true);
-  const handleCloseModal = () => setOpenModal(false);
+  const [toogleModal, setToogleModal] = useState(false);
+  const handleToogleModal = () => setToogleModal(!toogleModal);
 
   return (
     <section className="text-black w-5/6 md:min-h-[705px] flex flex-col items-center max-w-[1200px]">
@@ -36,7 +34,7 @@ export function ListCards({ data, page }: PropsListCards) {
         <div className="w-full md:order-last">
           <ButtonCustom
             className="w-full h-10 bg-white- text-orange- border-2 border-orange- my-2 active:scale-95"
-            onClick={handleOpenModal}
+            onClick={handleToogleModal}
           >
             Criar
           </ButtonCustom>
@@ -50,7 +48,7 @@ export function ListCards({ data, page }: PropsListCards) {
       <div>
         {data && <PaginationRounded pages={data.pages} currentPage={page} />}
       </div>
-      <ModalCustom open={openModal} handleOpen={handleCloseModal}>
+      <ModalCustom open={toogleModal} handleToggleModal={handleToogleModal}>
         <FormCreateClient />
       </ModalCustom>
     </section>
