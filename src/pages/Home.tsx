@@ -1,5 +1,5 @@
 import React from "react";
-import { FormHome } from "../components/FormHome";
+import { FormHome } from "../components/Forms/FormHome";
 export function Home() {
   return (
     <div className="h-screen w-full justify-center items-center flex flex-col gap-3">
