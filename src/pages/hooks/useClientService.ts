@@ -11,9 +11,13 @@ export function useGetUsersQuery({ query }: Props) {
   const [searchParams] = useSearchParams();
   const page = Number(searchParams.get("page")) || 1;
   const { data, isLoading, isError } = useQuery({
-    queryKey: ["usersNotSelected", page, limit],
+    queryKey: [query, page, limit],
     queryFn: () =>
-      getUsers({ page: String(page), limit: limit, isSelected: true }),
+      getUsers({
+        page: String(page),
+        limit: limit,
+        isSelected: query === "usersSelected" ? true : false,
+      }),
   });
   return {
     data,
