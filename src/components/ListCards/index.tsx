@@ -3,7 +3,9 @@ import PaginationRounded from "../Pagination";
 import { ButtonCustom } from "../Button";
 import SelectAutoWidth from "../Select";
 import { Cards } from "../Cards";
-import React from "react";
+import React, { useState } from "react";
+import { ModalCustom } from "../Modal";
+import { FormCreateClient } from "../Forms/FormCreateClient";
 
 type PropsListCards = {
   data: PaginatedUserResponse;
@@ -11,6 +13,11 @@ type PropsListCards = {
 };
 
 export function ListCards({ data, page }: PropsListCards) {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
+
   return (
     <section className="text-black w-5/6 md:min-h-[705px] flex flex-col items-center max-w-[1200px]">
       <div className="flex flex-col md:flex-row md:justify-between w-full pt-3">
@@ -27,7 +34,10 @@ export function ListCards({ data, page }: PropsListCards) {
       </div>
       <div className="w-full flex flex-col">
         <div className="w-full md:order-last">
-          <ButtonCustom className="w-full h-10 bg-white- text-orange- border-2 border-orange- my-2 active:scale-95">
+          <ButtonCustom
+            className="w-full h-10 bg-white- text-orange- border-2 border-orange- my-2 active:scale-95"
+            onClick={handleOpenModal}
+          >
             Criar
           </ButtonCustom>
         </div>
@@ -40,6 +50,9 @@ export function ListCards({ data, page }: PropsListCards) {
       <div>
         {data && <PaginationRounded pages={data.pages} currentPage={page} />}
       </div>
+      <ModalCustom open={openModal} handleOpen={handleCloseModal}>
+        <FormCreateClient />
+      </ModalCustom>
     </section>
   );
 }

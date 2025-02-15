@@ -8,12 +8,22 @@ type ModalProps = {
 
 export function ModalCustom({ open, handleOpen, children }: ModalProps) {
   if (!open) return null;
+
+  const handleContentClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-55 z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+    <div
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-55 z-50 overflow-hidden!"
+      onClick={handleOpen}
+    >
+      <div
+        className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full flex justify-center items-center"
+        onClick={handleContentClick}
+      >
         {children}
       </div>
-      <div className="absolute inset-0" onClick={handleOpen}></div>
     </div>
   );
 }
