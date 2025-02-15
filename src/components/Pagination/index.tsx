@@ -15,7 +15,7 @@ export default function PaginationRounded({
   const { handlePageChange } = usePagination();
 
   return (
-    <Stack spacing={2} className="mt-5 mb-5">
+    <Stack spacing={2} className="mt-1 mb-5">
       <Pagination
         count={pages}
         page={currentPage}

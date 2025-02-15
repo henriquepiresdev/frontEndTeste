@@ -2,7 +2,7 @@ import { useClientSelected } from "./hooks/useClientSelected";
 import { ListCards } from "../components/ListCards";
 import { Header } from "../components/Header";
 import { When } from "../components/When";
-import React, { useEffect } from "react";
+import React from "react";
 
 export function ClientsSelected() {
   const { data, page } = useClientSelected();

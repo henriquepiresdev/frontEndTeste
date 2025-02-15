@@ -33,7 +33,7 @@ export function ListCards({ data, page }: PropsListCards) {
       <div className="w-full flex flex-col">
         <div className="w-full md:order-last">
           <ButtonCustom
-            className="w-full h-10 bg-white- text-orange- border-2 border-orange- my-2 active:scale-95"
+            className="w-full h-10 bg-white- text-orange- border-2 border-orange- my-2 active:scale-95 hover:text-white- hover:bg-orange-"
             onClick={handleToogleModal}
           >
             Criar
