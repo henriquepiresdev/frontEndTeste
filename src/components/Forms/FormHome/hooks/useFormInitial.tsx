@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
-import { useUserContext } from "../../../../context";
 import { UserFormData } from "../../../../schemas/formHome.schema";
+import { useUserContext } from "../../../../context";
+import { useNavigate } from "react-router-dom";
 
 export function useFormInitial() {
-  const { setUsername, username } = useUserContext();
+  const { setUsername } = useUserContext();
   const navigate = useNavigate();
 
   const handleSubmit = (data: UserFormData) => {

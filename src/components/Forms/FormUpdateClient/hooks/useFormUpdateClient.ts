@@ -1,11 +1,12 @@
-import { User } from "../../../../Api/@types/user";
 import { formUpdateClientSchemaData } from "../../../../schemas/formUpdateClient.schema";
 import { processCurrency } from "../../../../utills/functions/formatToNumberInt";
 import { useFormUpdateClientService } from "./useFormUpdateClientService";
+import { User } from "../../../../Api/@types/user";
 type Props = {
   data: User;
   handleToggleModal: () => void;
 };
+
 export function useFormUpdateClient({ data, handleToggleModal }: Props) {
   const { updateClientMutation } = useFormUpdateClientService({
     data,

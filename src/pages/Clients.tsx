@@ -1,9 +1,9 @@
 import { ListCards } from "../components/ListCards";
+import { useClient } from "./hooks/useClient";
 import { Header } from "../components/Header";
 import { When } from "../components/When";
 import React from "react";
 
-import { useClient } from "./hooks/useClient";
 export function Clients() {
   const { data, page } = useClient();
   return (

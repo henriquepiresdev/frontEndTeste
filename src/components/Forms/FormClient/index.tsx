@@ -1,10 +1,10 @@
+import { FieldValues, DefaultValues } from "react-hook-form";
+import { InputCurrency } from "../Input/InputCurrency";
 import { ButtonCustom } from "../../Button";
 import { Input } from "../Input";
 import { Form } from "../Form";
-import { InputCurrency } from "../Input/InputCurrency";
-import React from "react";
-import { FieldValues, DefaultValues } from "react-hook-form";
 import { ZodType } from "zod";
+import React from "react";
 
 interface ClientFormProps<T extends FieldValues> {
   schema: ZodType<T>;

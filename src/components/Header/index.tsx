@@ -10,6 +10,7 @@ export function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <header className="text-white p-4 h-32 md:h-24 flex justify-evenly flex-col gap-5 md:flex-row md:justify-between items-center bg-white shadow-sm">
       <div className="w-full md:w-1/4 h-full flex md:justify-evenly">

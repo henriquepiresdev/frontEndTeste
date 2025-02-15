@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { User } from "../../../../Api/@types/user";
 import { createUser } from "../../../../Api/routes";
+import { User } from "../../../../Api/@types/user";
 
 export function useFormCreateClientService() {
   const queryClient = useQueryClient();

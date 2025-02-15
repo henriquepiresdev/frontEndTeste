@@ -1,11 +1,11 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { LimitProvider } from "./context/limitContext";
 import { ThemeProvider } from "@material-tailwind/react";
-import React from 'react';
+import { UserProvider } from './context';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
+import React from 'react';
 import './index.css';
-import { UserProvider } from './context';
-import { LimitProvider } from "./context/limitContext";
 
 
 const queryClient = new QueryClient();

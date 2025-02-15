@@ -1,11 +1,11 @@
 import { useFormUpdateClient } from "./hooks/useFormUpdateClient";
 import { User } from "../../../Api/@types/user";
 import { ClientForm } from "../FormClient";
+import React from "react";
 import {
   formUpdateClientSchemaData,
   formUpdateClientSchema,
 } from "../../../schemas/formUpdateClient.schema";
-import React from "react";
 
 type FormHomeProps = {
   className?: string;

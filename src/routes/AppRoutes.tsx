@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ClientsSelected } from "../pages/ClientsSelected";
 import { Clients } from "../pages/Clients";
 import { Home } from "../pages/Home";
 import React from "react";
-import { ClientsSelected } from "../pages/ClientsSelected";
 
 const App = () => (
   <BrowserRouter>

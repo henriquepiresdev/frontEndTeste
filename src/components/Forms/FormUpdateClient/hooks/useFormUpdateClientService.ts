@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { User } from "../../../../Api/@types/user";
 import { updateUser } from "../../../../Api/routes";
+import { User } from "../../../../Api/@types/user";
 
 type Props = {
   data: User;
