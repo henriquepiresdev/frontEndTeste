@@ -39,7 +39,7 @@ export const getUserById = async (id: string): Promise<AxiosResponse<User>> => {
 };
 
 export const updateUser = async (
-  id: string,
+  id: number,
   user: Partial<User>
 ): Promise<AxiosResponse<User>> => {
   return axios.patch(`${apiUrl}/users/${id}`, user);
