@@ -1,6 +1,5 @@
-import { ReactNode } from "react";
-import { useLocation } from "react-router-dom";
-import React from "react";
+import React, { ReactNode } from "react";
+import { useLocation, Link as RouterLink } from "react-router-dom";
 
 interface LinkProps {
   children: ReactNode;
@@ -10,16 +9,17 @@ interface LinkProps {
 export function Link({ children, href }: LinkProps) {
   const location = useLocation();
   const isActive = location.pathname === href;
+
   return (
-    <a
-      href={href}
+    <RouterLink
+      to={href}
       className={`font-sans font-semibold ${
         isActive
-          ? "text-orange- underline"
-          : "text-black hover:underline hover:text-orange-"
+          ? "text-orange-600 underline"
+          : "text-black hover:underline hover:text-orange-600"
       } min-w-content whitespace-nowrap`}
     >
       {children}
-    </a>
+    </RouterLink>
   );
 }
