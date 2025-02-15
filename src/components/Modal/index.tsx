@@ -2,11 +2,11 @@ import React, { ReactNode } from "react";
 
 type ModalProps = {
   open: boolean;
-  handleOpen: () => void;
+  handleToggleModal: () => void;
   children: ReactNode;
 };
 
-export function ModalCustom({ open, handleOpen, children }: ModalProps) {
+export function ModalCustom({ open, handleToggleModal, children }: ModalProps) {
   if (!open) return null;
 
   const handleContentClick = (e: React.MouseEvent) => {
@@ -16,7 +16,7 @@ export function ModalCustom({ open, handleOpen, children }: ModalProps) {
   return (
     <div
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-55 z-50 overflow-hidden!"
-      onClick={handleOpen}
+      onClick={handleToggleModal}
     >
       <div
         className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full flex justify-center items-center"

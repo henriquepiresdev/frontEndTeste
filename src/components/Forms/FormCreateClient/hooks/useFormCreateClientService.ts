@@ -11,7 +11,7 @@ export function useFormCreateClientService() {
       queryClient.invalidateQueries({ queryKey: ["usersNotSelected"] });
     },
     onError: (error) => {
-      // Lógica de tratamento de erro
+      // pode ser um toast
     },
   });
 
