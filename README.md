@@ -1,14 +1,60 @@
-# React + Vite + TailWindCSS - A Template Repo
+# Projeto Open Finance
 
-It is a template repository for you to start a project using React and TailwindCSS. You just need to create a new repository from this template repo by clicking the button at the top right corner of this page.
+Aplicação React + Vite com integração a uma API.
 
-## Watch This Video
+## 📋 Pré-requisitos
 
-<https://www.youtube.com/watch?v=Zk2YJUvfsOA>
+- Node.js v18+
+- npm/yarn/pnpm
 
-## Links
+## 🛠 Configuração Inicial
 
-- Install Node.js: <https://nodejs.org/en>
-- Install Vite: <https://vitejs.dev/>
-- TailwindCSS: <https://tailwindcss.com/>
-- How to Learn TailwindCSS?: <https://www.youtube.com/shorts/BhasK2BPn8c>
+1. **Clone o repositório**:
+
+```bash
+git clone https://github.com/henriquepiresdev/frontEndTeste.git
+cd frontEndTeste
+```
+
+2. **Instale as dependências**:
+
+```bash
+npm install
+```
+
+3. **Crie o arquivo .env** (copie exatamente como abaixo):
+
+```env
+VITE_API_URL="http://localhost:3000"
+```
+
+4. **Execute a aplicação**:
+
+```bash
+npm run dev
+```
+
+Acesse: [http://localhost:5173](http://localhost:5173)
+
+## 🔄 Comandos Principais
+
+```bash
+npm run dev    # Inicia o servidor de desenvolvimento
+npm run build  # Cria a build de produção
+npm run preview  # Testa a build localmente
+```
+
+## ⚠️ Solução de Problemas
+
+- **API não conecta?** Verifique se:
+  - A API está rodando na porta 3000
+  - O arquivo `.env` foi criado corretamente
+- **Erros de instalação?** Execute:
+
+```bash
+rm -rf node_modules && npm install
+```
+
+## 📝 Licença
+
+MIT License - henriquepiresdev
