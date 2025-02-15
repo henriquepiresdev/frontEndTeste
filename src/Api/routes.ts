@@ -34,7 +34,7 @@ export const getUsers = async ({
   return response.data;
 };
 
-export const getUserById = async (id: string): Promise<AxiosResponse<User>> => {
+export const getUserById = async (id: number): Promise<AxiosResponse<User>> => {
   return axios.get(`${apiUrl}/users/${id}`);
 };
 
@@ -45,6 +45,6 @@ export const updateUser = async (
   return axios.patch(`${apiUrl}/users/${id}`, user);
 };
 
-export const deleteUser = async (id: string): Promise<AxiosResponse<void>> => {
+export const deleteUser = async (id: number): Promise<AxiosResponse<void>> => {
   return axios.delete(`${apiUrl}/users/${id}`);
 };
