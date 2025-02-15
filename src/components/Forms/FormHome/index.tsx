@@ -1,6 +1,6 @@
-import { formHomeSchema, UserFormData } from "../../schemas/formHome.schema";
+import { formHomeSchema, UserFormData } from "../../../schemas/formHome.schema";
 import { useFormInitial } from "./hooks/useFormInitial";
-import { ButtonCustom } from "../Button";
+import { ButtonCustom } from "../../Button";
 import { Input } from "../Input";
 import { Form } from "../Form";
 import React from "react";

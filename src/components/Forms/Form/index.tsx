@@ -1,5 +1,4 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { cn } from "../../utills/tailwind/cn";
 import React from "react";
 import { z } from "zod";
 import {
@@ -9,6 +8,7 @@ import {
   FieldValues,
   DefaultValues,
 } from "react-hook-form";
+import { cn } from "../../../utills/tailwind/cn";
 
 type FormProps<T extends FieldValues> = {
   schema: z.ZodType<T>;
