@@ -27,7 +27,7 @@ const parseCurrency = (formattedValue: string): string => {
 export function InputCurrency({
   name,
   label,
-  placeholder = "R$ 00,00",
+  placeholder = "R$ 000,00",
   className = "",
 }: InputProps) {
   const {
