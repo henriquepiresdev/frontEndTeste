@@ -6,4 +6,29 @@
 html,
 body {
     min-height: 100vh;
+
+    ::-webkit-scrollbar {
+        width: 8px;
+
+    }
+
+
+    ::-webkit-scrollbar-track {
+        background: #a1a1a1;
+
+        border-radius: 10px;
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(236, 103, 36, 1);
+
+        border-radius: 10px;
+    }
+
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(236, 103, 36, 0.8);
+
+    }
 }
