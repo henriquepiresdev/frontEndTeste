@@ -3,9 +3,9 @@ import { Header } from "../components/Header";
 import { When } from "../components/When";
 import React from "react";
 
-import { useClientNotSelected } from "./hooks/useClient";
+import { useClient } from "./hooks/useClient";
 export function Clients() {
-  const { data, page } = useClientNotSelected();
+  const { data, page } = useClient();
   return (
     <div className="bg-white-2 w-full min-h-screen">
       <Header />
