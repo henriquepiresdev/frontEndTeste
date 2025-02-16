@@ -27,7 +27,7 @@ export function Cards({ data }: CardsProps) {
   } = useCards();
 
   return (
-    <li className="w-[285px] h-[138px] bg-white- rounded-lg flex flex-col items-center justify-between">
+    <li className=" h-[138px] bg-white- rounded-lg flex flex-col items-center justify-between w-full max-w-[300px] md:max-w-none">
       <div className="h-4/5 w-full flex flex-col items-center justify-center">
         <h2 className="font-semibold">{formatName(data.name)}</h2>
         <p>
@@ -43,14 +43,14 @@ export function Cards({ data }: CardsProps) {
           render={
             <ButtonIcon
               Icon={FaMinus}
-              className="hover:text-orange- text-red-900 hover:scale-105"
+              className=" text-orange- hover:scale-110"
               onClick={() => handleClick({ isSelected: false, id: data.id })}
             />
           }
           elseRender={
             <ButtonIcon
               Icon={FaPlus}
-              className="hover:text-orange- text-green-700 hover:scale-x-125 "
+              className="hover:text-orange- text-orange- hover:scale-x-125 "
               onClick={() => handleClick({ isSelected: true, id: data.id })}
             />
           }
