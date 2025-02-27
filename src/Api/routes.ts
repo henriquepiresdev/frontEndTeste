@@ -20,18 +20,15 @@ export const getUsers = async ({
   isSelected?: boolean;
 }): Promise<PaginatedUserResponse> => {
   const params = new URLSearchParams();
-  params.append("page", "1");
-  params.append("limit", "16");
+  params.append("page", page);
+  params.append("limit", limit);
 
   if (isSelected !== undefined) {
     params.append("isSelected", String(isSelected));
   }
-  console.log(apiUrl);
-  console.log(params);
   const response: AxiosResponse<PaginatedUserResponse> = await axios.get(
     `${apiUrl}/users?${params.toString()}`
   );
-  console.log(response.data);
   return response.data;
 };
 
