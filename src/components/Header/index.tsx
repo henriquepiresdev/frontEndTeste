@@ -20,8 +20,8 @@ export function Header() {
               <LuMenu className="w-6 h-6 text-gray-600 font-semibold" />
             </button>
           </div>
-          <div className="w-1/2 md:w-2/3 h-full flex justify-start">
-            <img src="/logo.png" alt="logotipo da Teddy" />
+          <div className="w-1/2 md:w-2/3 h-full flex justify-start items-center">
+            <img src="/logo.png" alt="logotipo da Teddy" className="h-1/2" />
           </div>
         </div>
         <div className="w-full md:w-1/2 h-full flex justify-around items-center max-w-lg flex-wrap">

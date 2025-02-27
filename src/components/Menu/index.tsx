@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, toggleMenu }: SidebarProps) => {
         <div className="w-[320px] h-full relative">
           <div className="flex items-center justify-between p-4 border-b">
             <span className="text-xl font-bold w-full flex justify-center">
-              <img src="/logo.svg" alt="logo da teddy " />
+              <img src="/logo.png" alt="logo da teddy " />
             </span>
             <When value={isOpen}>
               <button
