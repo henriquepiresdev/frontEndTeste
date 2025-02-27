@@ -1,7 +1,7 @@
 import { useUserContext } from "../../context";
+import React, { useState } from "react";
 import { LuMenu } from "react-icons/lu";
 import { Link } from "../Link";
-import React, { useState } from "react";
 import Sidebar from "../Menu";
 
 export function Header() {
@@ -21,7 +21,7 @@ export function Header() {
             </button>
           </div>
           <div className="w-1/2 md:w-2/3 h-full flex justify-start">
-            <img src="/logo.svg" alt="logotipo da Teddy" />
+            <img src="/logo.png" alt="logotipo da Teddy" />
           </div>
         </div>
         <div className="w-full md:w-1/2 h-full flex justify-around items-center max-w-lg flex-wrap">
